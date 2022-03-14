@@ -1,0 +1,170 @@
+[
+    {
+        "id": 1,
+        "is_sample": true,
+        "observable_name": "scanme.org",
+        "observable_classification": "domain",
+        "file_name": "string",
+        "file_mimetype": "string",
+        "status": "reported_without_fails",
+        "tags": [
+        {
+            "id": 0,
+            "label": "black",
+            "color": "string"
+        },
+		{
+			"id": 1,
+			"label": "red",
+			"color": "string"
+		}
+        ],
+        "process_time": 300,
+        "no_of_analyzers_executed": "2",
+        "no_of_connectors_executed": "string"
+    },
+    {
+        "id": 2,
+        "is_sample": true,
+        "observable_name": "scanme.org",
+        "observable_classification": "domain",
+        "file_name": "string",
+        "file_mimetype": "string",
+        "status": "reported_without_fails",
+        "tags": [
+        {
+            "id": 0,
+            "label": "black",
+            "color": "string"
+        },
+		{
+			"id": 1,
+			"label": "red",
+			"color": "string"
+		}
+        ],
+        "process_time": 300,
+        "no_of_analyzers_executed": "2",
+        "no_of_connectors_executed": "string"
+    },
+    {
+        "id": 3,
+        "is_sample": true,
+        "observable_name": "google.com",
+        "observable_classification": "domain",
+        "file_name": "string",
+        "file_mimetype": "string",
+        "status": "reported_without_fails",
+        "tags": [
+        {
+            "id": 0,
+            "label": "white",
+            "color": "string"
+        },
+		{
+			"id": 1,
+			"label": "green",
+			"color": "string"
+		}
+        ],
+        "process_time": 150,
+        "no_of_analyzers_executed": "2",
+        "no_of_connectors_executed": "string"
+    },
+    {
+        "id": 4,
+        "is_sample": true,
+        "observable_name": "go.dev",
+        "observable_classification": "domain",
+        "file_name": "string",
+        "file_mimetype": "string",
+        "status": "reported_without_fails",
+        "tags": [
+        {
+            "id": 0,
+            "label": "blue",
+            "color": "string"
+        },
+		{
+			"id": 1,
+			"label": "cyan",
+			"color": "string"
+		}
+        ],
+        "process_time": 10,
+        "no_of_analyzers_executed": "2",
+        "no_of_connectors_executed": "string"
+    },
+    {
+        "id": 5,
+        "is_sample": true,
+        "observable_name": "amazon.com",
+        "observable_classification": "domain",
+        "file_name": "string",
+        "file_mimetype": "string",
+        "status": "reported_without_fails",
+        "tags": [
+        {
+            "id": 0,
+            "label": "yellow",
+            "color": "string"
+        },
+		{
+			"id": 1,
+			"label": "white",
+			"color": "string"
+		}
+        ],
+        "process_time": 600,
+        "no_of_analyzers_executed": "2",
+        "no_of_connectors_executed": "string"
+    },
+    {
+        "id": 6,
+        "is_sample": true,
+        "observable_name": "scanme.org",
+        "observable_classification": "domain",
+        "file_name": "string",
+        "file_mimetype": "string",
+        "status": "reported_without_fails",
+        "tags": [
+        {
+            "id": 0,
+            "label": "black",
+            "color": "string"
+        },
+		{
+			"id": 1,
+			"label": "blue",
+			"color": "string"
+		}
+        ],
+        "process_time": 110,
+        "no_of_analyzers_executed": "2",
+        "no_of_connectors_executed": "string"
+    },
+    {
+        "id": 7,
+        "is_sample": true,
+        "observable_name": "duckduckgo.com",
+        "observable_classification": "domain",
+        "file_name": "string",
+        "file_mimetype": "string",
+        "status": "reported_without_fails",
+        "tags": [
+        {
+            "id": 0,
+            "label": "black",
+            "color": "string"
+        },
+		{
+			"id": 1,
+			"label": "red",
+			"color": "string"
+		}
+        ],
+        "process_time": 15,
+        "no_of_analyzers_executed": "2",
+        "no_of_connectors_executed": "string"
+    }
+]
