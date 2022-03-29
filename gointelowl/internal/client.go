@@ -15,6 +15,7 @@ type (
 
 	// Job represents a job returned by the API
 	Job struct {
+		client                   *Client
 		ID                       uint      `json:"id"`
 		IsSample                 bool      `json:"is_sample"`
 		ObservableName           string    `json:"observable_name"`
@@ -40,6 +41,8 @@ type (
 		apiKey     string
 		httpClient *http.Client
 		baseURL    *url.URL
+
+		Job *Job
 	}
 )
 
@@ -61,6 +64,8 @@ func NewClient(apiKey string) (*Client, error) {
 		httpClient: &http.Client{Timeout: time.Minute}, // read timeout from config?
 		baseURL:    u,
 	}
+
+	c.Job = &Job{client: c}
 
 	return c, nil
 }
@@ -121,15 +126,15 @@ func (c *Client) performRequest(req *http.Request, expectedStatus int) ([]Job, e
 	return jobs, nil
 }
 
-func (c *Client) GetJobs(ctx context.Context) ([]Job, error) {
+func (j *Job) GetJobs(ctx context.Context) ([]Job, error) {
 	jobsUri := "/jobs"
 
-	req, err := c.buildReq(ctx, http.MethodGet, jobsUri, nil)
+	req, err := j.client.buildReq(ctx, http.MethodGet, jobsUri, nil)
 	if err != nil {
 		return nil, err
 	}
 
-	resp, err := c.performRequest(req, 200)
+	resp, err := j.client.performRequest(req, 200)
 	if err != nil {
 		return nil, err
 	}

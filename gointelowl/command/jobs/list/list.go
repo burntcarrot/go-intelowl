@@ -46,7 +46,7 @@ func (opts *JobListOptions) getData(ctx context.Context) error {
 		return err
 	}
 
-	opts.jobData, err = client.GetJobs(ctx)
+	opts.jobData, err = client.Job.GetJobs(ctx)
 	if err != nil {
 		return err
 	}
