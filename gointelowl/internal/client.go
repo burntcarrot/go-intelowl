@@ -13,9 +13,16 @@ import (
 // Variable naming is matched to the API data field names, camel case is preferred.
 type (
 
+	// Service objects
+
+	// Job Service object
+	JobService struct {
+		client *Client
+		Job    *Job
+	}
+
 	// Job represents a job returned by the API
 	Job struct {
-		client                   *Client
 		ID                       uint      `json:"id"`
 		IsSample                 bool      `json:"is_sample"`
 		ObservableName           string    `json:"observable_name"`
@@ -42,7 +49,7 @@ type (
 		httpClient *http.Client
 		baseURL    *url.URL
 
-		Job *Job
+		Job *JobService
 	}
 )
 
@@ -65,7 +72,7 @@ func NewClient(apiKey string) (*Client, error) {
 		baseURL:    u,
 	}
 
-	c.Job = &Job{client: c}
+	c.Job = &JobService{client: c}
 
 	return c, nil
 }
@@ -126,7 +133,7 @@ func (c *Client) performRequest(req *http.Request, expectedStatus int) ([]Job, e
 	return jobs, nil
 }
 
-func (j *Job) GetJobs(ctx context.Context) ([]Job, error) {
+func (j *JobService) GetJobs(ctx context.Context) ([]Job, error) {
 	jobsUri := "/jobs"
 
 	req, err := j.client.buildReq(ctx, http.MethodGet, jobsUri, nil)
