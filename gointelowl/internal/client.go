@@ -18,7 +18,6 @@ type (
 	// Job Service object
 	JobService struct {
 		client *Client
-		Job    *Job
 	}
 
 	// Job represents a job returned by the API
